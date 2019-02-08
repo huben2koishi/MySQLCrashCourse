@@ -18,8 +18,8 @@ WHERE prod_price = 2.50;
 # 检查单个值
 SELECT prod_name, prod_price
 FROM products
-# WHERE prod_name = 'fuses';
-# WHERE prod_price < 10;
+     # WHERE prod_name = 'fuses';
+     # WHERE prod_price < 10;
 WHERE vend_id != 1003;
 
 # 范围值检查

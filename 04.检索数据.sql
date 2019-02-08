@@ -26,5 +26,5 @@ FROM products
 LIMIT 4 OFFSET 3; # 从行3开始, 取4行
 
 # 使用完全限定的表名
-SELECT  products.prod_name
+SELECT products.prod_name
 FROM crashcourse.products;
