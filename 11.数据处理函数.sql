@@ -11,7 +11,7 @@ SELECT vend_name, UPPER(vend_name) AS vend_name_upcase
 FROM vendors
 ORDER BY vend_name;
 
-SELECT cust_name,cust_contact
+SELECT cust_name, cust_contact
 FROM customers
 WHERE SOUNDEX(cust_contact) = SOUNDEX('Y Lie');
 
@@ -33,4 +33,27 @@ WHERE SOUNDEX(cust_contact) = SOUNDEX('Y Lie');
 # ADDTIME()     增加一个时间
 # DATE_ADD()    高度灵活的日期运算函数
 # DATEDIFF()    计算两个日期之差
+SELECT cust_id, order_num
+FROM orders
+WHERE DATE(order_date) = '2005-09-01';
 
+SELECT cust_id, order_num
+FROM orders
+WHERE DATE(order_date) BETWEEN '2005-09-01' AND '2005-09-31';
+
+SELECT cust_id, order_num
+FROM orders
+WHERE YEAR(order_date) = 2005
+  AND MONTH(order_date) = 9;
+
+# 数值处理函数
+# ABS()  绝对值
+# SIN()  正弦
+# COS()  余弦
+# TAN()  正切
+# EXP()  返回指数值
+# MOD()  取模
+# SQRT() 平方根
+# PI()   圆周率
+# RAND() 随机数
+SELECT MOD(5,2);
