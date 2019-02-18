@@ -77,4 +77,3 @@ SELECT prod_name
 FROM products
 WHERE prod_name REGEXP '^[0-9\\.]'
 ORDER BY prod_name;
-
