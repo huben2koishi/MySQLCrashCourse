@@ -21,4 +21,24 @@ WHERE p1.vend_id = p2.vend_id
 
 # 自然联结
 SELECT c.*, o.order_num, o.order_date, oi.prod_id, oi.quantity, oi.item_price
-FROM customers AS c, orders AS o, orderitems AS oi
+FROM customers AS c,
+     orders AS o,
+     orderitems AS oi
+WHERE c.cust_id = o.cust_id
+  AND oi.order_num = o.order_num
+  AND prod_id = 'FB';
+
+# 外部联结
+SELECT customers.cust_id, orders.order_num
+FROM customers
+         LEFT OUTER JOIN orders
+                         on customers.cust_id = orders.cust_id;
+#          RIGHT OUTER JOIN orders
+#                          on customers.cust_id = orders.cust_id;
+
+# 带聚集函数的联结
+SELECT customers.cust_name, customers.cust_id, COUNT(orders.order_num) AS num_ord
+FROM customers
+         INNER JOIN orders
+                    on customers.cust_id = orders.cust_id
+GROUP BY customers.cust_id;

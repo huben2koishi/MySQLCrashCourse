@@ -28,7 +28,7 @@ FROM orderitems
 WHERE order_num = 20005;
 
 # DISTINCT 指定唯一
-SELECT (prod_price) AS avg_price
+SELECT AVG(DISTINCT prod_price) AS avg_price
 FROM products
 WHERE vend_id = 1003;
 
