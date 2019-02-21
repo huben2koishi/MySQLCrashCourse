@@ -8,6 +8,8 @@
 ########################
 # Create customers table
 ########################
+CREATE DATABASE crashcourses;
+use crashcourses;
 CREATE TABLE customers
 (
     cust_id      int       NOT NULL AUTO_INCREMENT,

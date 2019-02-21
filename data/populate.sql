@@ -4,7 +4,7 @@
 # Example table population scripts
 ########################################
 
-
+use crashcourses;
 ##########################
 # Populate customers table
 ##########################
